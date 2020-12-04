@@ -1,0 +1,17 @@
+@media screen and (min-width: 769px) {
+  #nav {
+    ul {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+
+      background-color: darken($brand-color, 30%);
+      color: #ffffff;
+    }
+
+    ul li {
+      width: 50%;
+    }
+  }
+}
