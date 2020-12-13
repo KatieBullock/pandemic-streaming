@@ -1,4 +1,4 @@
 import "../src/scss/style.scss";
-import { greet } from "./greet";
+import { getTrendingMovies } from "./getTrendingMovies";
 
-// greet();
+getTrendingMovies();

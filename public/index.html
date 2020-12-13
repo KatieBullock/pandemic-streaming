@@ -3,7 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pandemic Streaming</title>
+    <title>The Quarantine Streaming Source</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+      defer
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="https://unpkg.com/regenerator-runtime@0.13.1/runtime.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.0.3/purify.js"
+      defer
+    ></script>
     <script src="assets/main.js" defer></script>
   </head>
   <body>
@@ -19,10 +29,14 @@
     </nav>
     <header>
       <div id="website-title">
-        <h1>Pandemic</h1>
-        <h2>Streaming</h2>
+        <h3>The</h3>
+        <h1>Quarantine</h1>
+        <h2>Streaming Source</h2>
       </div>
       <div id="website-description">
+        <div id="header-box-container">
+          <div id="header-box"></div>
+        </div>
         <p>
           Struggling to find something good to watch to help you get through
           this pandemic? Want to see what's hot on your favorite streaming
@@ -31,7 +45,7 @@
       </div>
     </header>
     <main>
-      <div></div>
+      <div id="streaming-movies"></div>
     </main>
     <footer id="footer">
       <ul>
@@ -42,9 +56,9 @@
           <a href="#"><span class="footer-links">About</span></a>
         </li>
       </ul>
+      <div class="copy">
+        <span>&copy; 2020</span>
+      </div>
     </footer>
-    <div class="copy">
-      <span>&copy; 2020</span>
-    </div>
   </body>
 </html>

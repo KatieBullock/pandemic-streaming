@@ -5,7 +5,7 @@ module.exports = {
   output: {
     filename: "main.js", // Your output filename
     path: path.resolve(__dirname, "./public/assets"), // Output file path
-    publicPath: "/assets/js", // Folder where all Webpack generated code will go
+    publicPath: "/assets/", // Folder where all Webpack generated code will go
   },
   module: {
     rules: [
