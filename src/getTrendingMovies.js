@@ -6,7 +6,7 @@ async function getTrendingMovies() {
 
     const movies = trendingResponse.data.results;
     console.log(movies);
-    let streamingMoviesSection = document.querySelector("#streaming-movies");
+    const movieCarousel = document.querySelector(`[data-target="carousel"]`);
 
     movies.forEach((movie) => {
       const { id } = movie;
@@ -17,59 +17,80 @@ async function getTrendingMovies() {
             `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=d231975905a7208744f2904932557125&language=en-US&region=US&include_adult=false`
           );
 
-          // console.log(streamingResponse.data);
-
-          let streamingMovies = streamingResponse.data;
+          let streamingMovie = streamingResponse.data;
           let buy;
           let rent;
           let flatrate;
-          console.log(streamingMovies);
 
-          if (streamingMovies.results.US) {
-            if (id === streamingMovies.id) {
-              // console.log(movie);
-              let movieDiv = document.createElement("div");
-              streamingMoviesSection.appendChild(movieDiv);
-              movieDiv.value = title;
-              movieDiv.textContent = title;
-              movieDiv.insertAdjacentHTML(
+          if (streamingMovie.results.US) {
+            if (id === streamingMovie.id) {
+              console.log(streamingMovie.results.US);
+              const movieItem = document.createElement("div");
+              movieCarousel.appendChild(movieItem);
+              movieItem.className = "item";
+              movieItem.insertAdjacentHTML(
                 "afterbegin",
                 DOMPurify.sanitize(
-                  `<img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="">`
+                  `<a href="${streamingMovie.results.US.link}" target="_blank"><img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt=""></a>
+                  <a href="${streamingMovie.results.US.link}" target="_blank"><p>${title}</p></a>`
                 )
               );
 
-              if (streamingMovies.results.US.buy) {
-                let buyDiv = document.createElement("div");
-                movieDiv.appendChild(buyDiv);
-                buyDiv.textContent = "Buy:";
-                buy = streamingMovies.results.US.buy;
+              if (streamingMovie.results.US.buy) {
+                let buySelect = document.createElement("select");
+                movieItem.appendChild(buySelect);
+
+                let buyText = document.createElement("option");
+                buyText.textContent = "Buy:";
+                buySelect.appendChild(buyText);
+                buyText.disabled = "disabled";
+
+                buy = streamingMovie.results.US.buy;
+
                 buy.forEach((item) => {
-                  buyDiv.insertAdjacentHTML(
+                  let buyOption = document.createElement("option");
+                  buySelect.appendChild(buyOption);
+                  buyOption.insertAdjacentHTML(
                     "beforeend",
                     DOMPurify.sanitize(`<p>${item.provider_name}</p>`)
                   );
                 });
               }
-              if (streamingMovies.results.US.rent) {
-                let rentDiv = document.createElement("div");
-                movieDiv.appendChild(rentDiv);
-                rentDiv.textContent = "Rent:";
-                rent = streamingMovies.results.US.rent;
+              if (streamingMovie.results.US.rent) {
+                let rentSelect = document.createElement("select");
+                movieItem.appendChild(rentSelect);
+
+                let rentText = document.createElement("option");
+                rentText.textContent = "Rent:";
+                rentSelect.appendChild(rentText);
+                rentText.disabled = "disabled";
+
+                rent = streamingMovie.results.US.rent;
+
                 rent.forEach((item) => {
-                  rentDiv.insertAdjacentHTML(
+                  let rentOption = document.createElement("option");
+                  rentSelect.appendChild(rentOption);
+                  rentOption.insertAdjacentHTML(
                     "beforeend",
                     DOMPurify.sanitize(`<p>${item.provider_name}</p>`)
                   );
                 });
               }
-              if (streamingMovies.results.US.flatrate) {
-                let flatrateDiv = document.createElement("div");
-                movieDiv.appendChild(flatrateDiv);
-                flatrateDiv.textContent = "Stream:";
-                flatrate = streamingMovies.results.US.flatrate;
+              if (streamingMovie.results.US.flatrate) {
+                let flatrateSelect = document.createElement("select");
+                movieItem.appendChild(flatrateSelect);
+
+                let flatrateText = document.createElement("option");
+                flatrateText.textContent = "Stream:";
+                flatrateSelect.appendChild(flatrateText);
+                flatrateText.disabled = "disabled";
+
+                flatrate = streamingMovie.results.US.flatrate;
+
                 flatrate.forEach((item) => {
-                  flatrateDiv.insertAdjacentHTML(
+                  let flatrateOption = document.createElement("option");
+                  flatrateSelect.appendChild(flatrateOption);
+                  flatrateOption.insertAdjacentHTML(
                     "beforeend",
                     DOMPurify.sanitize(`<p>${item.provider_name}</p>`)
                   );

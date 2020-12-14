@@ -1,4 +1,8 @@
 import "../src/scss/style.scss";
 import { getTrendingMovies } from "./getTrendingMovies";
+import { findMovieItemGroups } from "./findMovieItemGroups";
 
-getTrendingMovies();
+(async () => {
+  await getTrendingMovies();
+  findMovieItemGroups();
+})();

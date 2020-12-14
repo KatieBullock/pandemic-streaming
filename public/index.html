@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Quarantine Streaming Source</title>
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-      defer
-    ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
     <script src="https://unpkg.com/regenerator-runtime@0.13.1/runtime.js"></script>
     <script
@@ -45,7 +41,28 @@
       </div>
     </header>
     <main>
-      <div id="streaming-movies"></div>
+      <div id="streaming-movies">
+        <div class="carousel" data-target="carousel"></div>
+        <nav id="carousel-nav">
+          <ul class="pagination">
+            <li class="page-item">
+              <button
+                class="page-link"
+                type="button"
+                id="back-button"
+              >
+                &laquo;
+              </button>
+            </li>
+            <li class="page-item">
+              <button
+                class="page-link"
+                type="button"
+                id="forward-button"
+              >
+                &raquo;
+              </button>
+      </div>
     </main>
     <footer id="footer">
       <ul>
