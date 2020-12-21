@@ -22,7 +22,7 @@
           <a href="index.html#streaming-movies">Movies</a>
         </li>
         <li>
-          <a href="#">TV Shows</a>
+          <a href="index.html#streaming-tv">TV Shows</a>
         </li>
       </ul>
     </nav>
@@ -36,18 +36,34 @@
         <p>
           Struggling to find something good to watch to help you get through
           this pandemic? Let us help you pick a movie or show to watch while you
-          wait out the storm. The Quarantine Streaming Source gathers this
-          week's top trending movies and tv shows and all the ways you can watch
-          at home. Click through what's hot and stream away!
+          wait out the storm. Click through this week's top trending movies and
+          tv shows and see how you can watch at home.
         </p>
       </div>
     </header>
     <main>
       <div id="streaming-movies">
-        <div class="carousel"></div>
+        <h2 class="section-title">Movies</h2>
+        <div id="movie-carousel" class="carousel"></div>
         <nav class="carousel-nav">
-          <button type="button" id="back-button">&laquo;</button>
-          <button type="button" id="forward-button">&raquo;</button>
+          <button type="button" id="movie-back" class="back-button">
+            &laquo;
+          </button>
+          <button type="button" id="movie-forward" class="forward-button">
+            &raquo;
+          </button>
+        </nav>
+      </div>
+      <div id="streaming-tv">
+        <h2 class="section-title">TV Shows</h2>
+        <div id="tv-carousel" class="carousel"></div>
+        <nav class="carousel-nav">
+          <button type="button" id="tv-back" class="back-button">
+            &laquo;
+          </button>
+          <button type="button" id="tv-forward" class="forward-button">
+            &raquo;
+          </button>
         </nav>
       </div>
     </main>
@@ -59,6 +75,11 @@
         <li>
           <a href="index.html#streaming-movies"
             ><span class="footer-links">Movies</span></a
+          >
+        </li>
+        <li>
+          <a href="index.html#streaming-tv"
+            ><span class="footer-links">TV Shows</span></a
           >
         </li>
       </ul>

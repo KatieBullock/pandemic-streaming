@@ -75,9 +75,24 @@ header {
 }
 
 #streaming-movies {
-  margin: 10px auto;
+  margin: 20px auto;
+  padding: 10px;
   width: 80%;
   background-color: $honey-yellow;
+}
+
+#streaming-tv {
+  margin: 20px auto;
+  padding: 10px;
+  width: 80%;
+  background-color: $honey-yellow;
+}
+
+.section-title {
+  margin: 10px auto 0 auto;
+  width: 80%;
+  font-size: 2em;
+  font-family: "Dancing Script", cursive;
 }
 
 .carousel {
@@ -88,7 +103,7 @@ header {
   justify-content: center;
 
   .carousel-item {
-    padding: 10px;
+    margin: 10px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -106,6 +121,7 @@ header {
 
     h2 {
       text-align: center;
+      font-size: 1em;
     }
 
     a h2:hover {
@@ -113,7 +129,7 @@ header {
     }
 
     select {
-      margin-bottom: 5px;
+      margin: 5px 0;
       padding: 5px;
       width: 100%;
       outline: none;
@@ -136,7 +152,7 @@ header {
   justify-content: space-between;
 
   button {
-    margin: 0 20px 20px 20px;
+    margin: 0 15px 15px 15px;
     padding: 5px;
     width: 25%;
     outline: none;
@@ -153,10 +169,19 @@ header {
 }
 
 #footer {
+  padding: 20px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
 
   background-color: $blue-green;
   color: $prussian-blue;
+
+  ul li {
+    padding: 5px;
+  }
+
+  ul li a:hover {
+    color: $off-white;
+  }
 }
