@@ -12,11 +12,17 @@
     }
   }
 
-  #website-description {
-    width: 50%;
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
   }
 
-  #header-box {
-    position: absolute;
+  #website-description {
+    width: 50%;
+
+    p {
+      border-bottom: 20px solid $honey-yellow;
+    }
   }
 }
