@@ -1,4 +1,7 @@
 import "../src/scss/style.scss";
+import axios from "axios";
+import "regenerator-runtime/runtime";
+import DOMPurify from "dompurify";
 import { getTrendingMovies } from "./getTrendingMovies";
 import { getTrendingTv } from "./getTrendingTv";
 import { addMovieCarouselEvents } from "./addMovieCarouselEvents";

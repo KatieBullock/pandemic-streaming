@@ -1,3 +1,5 @@
+import axios from "axios";
+
 async function getTrendingTv() {
   try {
     const trendingResponse = await axios.get(
