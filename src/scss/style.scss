@@ -74,14 +74,9 @@ header {
   }
 }
 
-#streaming-movies {
-  margin: 20px auto;
-  padding: 10px;
-  width: 80%;
-  background-color: $honey-yellow;
-}
-
-#streaming-tv {
+#streaming-movies,
+#streaming-tv,
+#search {
   margin: 20px auto;
   padding: 10px;
   width: 80%;
@@ -93,6 +88,51 @@ header {
   width: 80%;
   font-size: 2em;
   font-family: "Dancing Script", cursive;
+}
+
+.section-subtitle {
+  margin: 0 auto;
+  width: 80%;
+}
+
+#search-form {
+  margin: 20px auto;
+  width: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#search-box {
+  padding: 5px;
+  width: 70%;
+  outline: none;
+  border: none;
+  background-color: $off-white;
+  color: $prussian-blue;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#search-box:focus {
+  border-left: 5px solid $blue-green;
+}
+
+#search-button {
+  margin: 0 auto;
+  padding: 5px;
+  width: 25%;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  background-color: $prussian-blue;
+  color: $off-white;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#search-button:hover {
+  background-color: $off-white;
+  color: $prussian-blue;
 }
 
 .carousel {

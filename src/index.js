@@ -6,10 +6,22 @@ import { getTrendingMovies } from "./getTrendingMovies";
 import { getTrendingTv } from "./getTrendingTv";
 import { addMovieCarouselEvents } from "./addMovieCarouselEvents";
 import { addTvCarouselEvents } from "./addTvCarouselEvents";
+import {
+  searchMulti,
+  addSearchContent,
+  addSearchCarouselEvents,
+} from "./searchMulti";
 
 (async () => {
+  const form = document.querySelector("#search-form");
+  const searchDisplay = document.querySelector("#search-result");
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    searchDisplay.innerHTML = "";
+    addSearchCarouselEvents();
+  });
+
   const movies = await getTrendingMovies();
-  console.log(movies);
 
   const streamingMovies = [];
 
@@ -30,8 +42,6 @@ import { addTvCarouselEvents } from "./addTvCarouselEvents";
     }
     await getStreamingMovies();
   }
-
-  console.log(streamingMovies);
 
   let buyMovie;
   let rentMovie;
@@ -135,7 +145,6 @@ import { addTvCarouselEvents } from "./addTvCarouselEvents";
   addMovieCarouselEvents();
 
   const shows = await getTrendingTv();
-  console.log(shows);
 
   const streamingShows = [];
 
@@ -156,8 +165,6 @@ import { addTvCarouselEvents } from "./addTvCarouselEvents";
     }
     await getStreamingTv();
   }
-
-  console.log(streamingShows);
 
   let buyShow;
   let rentShow;

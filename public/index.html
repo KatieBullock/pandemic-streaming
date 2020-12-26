@@ -37,7 +37,7 @@
     </header>
     <main>
       <div id="streaming-movies">
-        <h2 class="section-title">Movies</h2>
+        <h2 class="section-title">This Week's Hot Movies</h2>
         <div id="movie-carousel" class="carousel"></div>
         <nav class="carousel-nav">
           <button type="button" id="movie-back" class="back-button">
@@ -49,13 +49,36 @@
         </nav>
       </div>
       <div id="streaming-tv">
-        <h2 class="section-title">TV Shows</h2>
+        <h2 class="section-title">This Week's Hot Shows</h2>
         <div id="tv-carousel" class="carousel"></div>
         <nav class="carousel-nav">
           <button type="button" id="tv-back" class="back-button">
             &laquo;
           </button>
           <button type="button" id="tv-forward" class="forward-button">
+            &raquo;
+          </button>
+        </nav>
+      </div>
+      <div id="search">
+        <h2 class="section-title">Have Something Else in Mind?</h2>
+        <h3 class="section-subtitle">
+          Search for it here and click to see where it's streaming.
+        </h3>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Search for movies or shows"
+            id="search-box"
+          />
+          <button type="submit" id="search-button">Search</button>
+        </form>
+        <div id="search-result" class="carousel"></div>
+        <nav class="carousel-nav">
+          <button type="button" id="search-back" class="back-button">
+            &laquo;
+          </button>
+          <button type="button" id="search-forward" class="forward-button">
             &raquo;
           </button>
         </nav>
