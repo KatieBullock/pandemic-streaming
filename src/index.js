@@ -6,20 +6,10 @@ import { getTrendingMovies } from "./getTrendingMovies";
 import { getTrendingTv } from "./getTrendingTv";
 import { addMovieCarouselEvents } from "./addMovieCarouselEvents";
 import { addTvCarouselEvents } from "./addTvCarouselEvents";
-import {
-  searchMulti,
-  addSearchContent,
-  addSearchCarouselEvents,
-} from "./searchMulti";
+import { searchMulti } from "./searchMulti";
 
 (async () => {
-  const form = document.querySelector("#search-form");
-  const searchDisplay = document.querySelector("#search-result");
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    searchDisplay.innerHTML = "";
-    addSearchCarouselEvents();
-  });
+  searchMulti();
 
   const movies = await getTrendingMovies();
 
