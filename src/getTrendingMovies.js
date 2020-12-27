@@ -1,9 +1,10 @@
 import axios from "axios";
+import { API_KEY } from "./apiKey";
 
 async function getTrendingMovies() {
   try {
     const trendingResponse = await axios.get(
-      "https://api.themoviedb.org/3/trending/movie/week?api_key=d231975905a7208744f2904932557125&language=en-US&region=US&include_adult=false"
+      `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}&language=en-US&region=US&include_adult=false`
     );
     const movies = trendingResponse.data.results;
     return movies;

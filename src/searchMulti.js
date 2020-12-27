@@ -1,5 +1,6 @@
 import axios from "axios";
 import DOMPurify from "dompurify";
+import { API_KEY } from "./apiKey";
 
 const searchMulti = () => {
   const form = document.querySelector("#search-form");
@@ -10,7 +11,7 @@ const searchMulti = () => {
     try {
       const userInput = encodeURI(searchBox.value);
       const searchResponse = await axios.get(
-        `https://api.themoviedb.org/3/search/multi?api_key=d231975905a7208744f2904932557125&language=en-US&query=${userInput}&page=1&include_adult=false`
+        `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${userInput}&page=1&include_adult=false`
       );
       const searchResults = searchResponse.data.results;
       return searchResults;

@@ -2,6 +2,7 @@ import "../src/scss/style.scss";
 import axios from "axios";
 import "regenerator-runtime/runtime";
 import DOMPurify from "dompurify";
+import { API_KEY } from "./apiKey";
 import { getTrendingMovies } from "./getTrendingMovies";
 import { getTrendingTv } from "./getTrendingTv";
 import { addMovieCarouselEvents } from "./addMovieCarouselEvents";
@@ -21,7 +22,7 @@ import { searchMulti } from "./searchMulti";
     async function getStreamingMovies() {
       try {
         const streamingResponse = await axios.get(
-          `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=d231975905a7208744f2904932557125&language=en-US&region=US&include_adult=false`
+          `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=${API_KEY}&language=en-US&region=US&include_adult=false`
         );
         const streamingMovie = streamingResponse.data;
         streamingMovies.push(streamingMovie);
@@ -144,7 +145,7 @@ import { searchMulti } from "./searchMulti";
     async function getStreamingTv() {
       try {
         const streamingResponse = await axios.get(
-          `https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=d231975905a7208744f2904932557125&language=en-US&region=US&include_adult=false`
+          `https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=${API_KEY}&language=en-US&region=US&include_adult=false`
         );
         const streamingShow = streamingResponse.data;
         streamingShows.push(streamingShow);
