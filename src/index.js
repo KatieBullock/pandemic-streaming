@@ -68,6 +68,7 @@ import { searchMulti } from "./searchMulti";
 
             buyText.textContent = "Buy:";
             buyText.disabled = "disabled";
+            buyText.selected = "true";
 
             buyMovie = streamingMovie.results.US.buy;
 
@@ -91,6 +92,7 @@ import { searchMulti } from "./searchMulti";
 
             rentText.textContent = "Rent:";
             rentText.disabled = "disabled";
+            rentText.selected = "true";
 
             rentMovie = streamingMovie.results.US.rent;
 
@@ -114,6 +116,7 @@ import { searchMulti } from "./searchMulti";
 
             flatrateText.textContent = "Stream:";
             flatrateText.disabled = "disabled";
+            flatrateText.selected = "true";
 
             flatrateMovie = streamingMovie.results.US.flatrate;
 
@@ -191,6 +194,7 @@ import { searchMulti } from "./searchMulti";
 
             buyText.textContent = "Buy:";
             buyText.disabled = "disabled";
+            buyText.selected = "true";
 
             buyShow = streamingShow.results.US.buy;
 
@@ -214,6 +218,7 @@ import { searchMulti } from "./searchMulti";
 
             rentText.textContent = "Rent:";
             rentText.disabled = "disabled";
+            rentText.selected = "true";
 
             rentShow = streamingShow.results.US.rent;
 
@@ -237,6 +242,7 @@ import { searchMulti } from "./searchMulti";
 
             flatrateText.textContent = "Stream:";
             flatrateText.disabled = "disabled";
+            flatrateText.selected = "true";
 
             flatrateShow = streamingShow.results.US.flatrate;
 

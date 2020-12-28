@@ -225,6 +225,15 @@ header {
     color: $off-white;
   }
 
+  div {
+    padding: 5px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
   p a:hover {
     color: $off-white;
   }
