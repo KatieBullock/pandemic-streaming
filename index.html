@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Quarantine Streaming Source</title>
+    <script src="assets/main.js" defer></script>
+  </head>
+  <body>
+    <nav id="nav">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="index.html#streaming-movies">Movies</a>
+        </li>
+        <li>
+          <a href="index.html#streaming-tv">TV Shows</a>
+        </li>
+        <li>
+          <a href="index.html#search">Search</a>
+        </li>
+      </ul>
+    </nav>
+    <header>
+      <div id="website-title">
+        <h3>The</h3>
+        <h1>Quarantine</h1>
+        <h2>Streaming Source</h2>
+      </div>
+      <div id="website-description">
+        <p>
+          Struggling to find something good to watch to help you get through
+          this pandemic? Let us help you pick a movie or show to watch while you
+          wait out the storm. Click through this week's top trending movies and
+          tv shows and see how you can watch at home.
+        </p>
+      </div>
+    </header>
+    <main>
+      <div id="streaming-movies">
+        <h2 class="section-title">This Week's Hot Movies</h2>
+        <div id="movie-carousel" class="carousel"></div>
+        <nav class="carousel-nav">
+          <button type="button" id="movie-back" class="back-button">
+            &laquo;
+          </button>
+          <button type="button" id="movie-forward" class="forward-button">
+            &raquo;
+          </button>
+        </nav>
+      </div>
+      <div id="streaming-tv">
+        <h2 class="section-title">This Week's Hot Shows</h2>
+        <div id="tv-carousel" class="carousel"></div>
+        <nav class="carousel-nav">
+          <button type="button" id="tv-back" class="back-button">
+            &laquo;
+          </button>
+          <button type="button" id="tv-forward" class="forward-button">
+            &raquo;
+          </button>
+        </nav>
+      </div>
+      <div id="search">
+        <h2 class="section-title">Have Something Else in Mind?</h2>
+        <h3 class="section-subtitle">
+          Search for it here and click to see where it's streaming.
+        </h3>
+        <form id="search-form">
+          <input
+            type="search"
+            placeholder="Search for movies or shows"
+            id="search-box"
+          />
+          <button type="submit" id="search-button">Search</button>
+        </form>
+        <div id="search-result" class="carousel"></div>
+        <nav class="carousel-nav">
+          <button type="button" id="search-back" class="back-button">
+            &laquo;
+          </button>
+          <button type="button" id="search-forward" class="forward-button">
+            &raquo;
+          </button>
+        </nav>
+      </div>
+    </main>
+    <footer id="footer">
+      <ul>
+        <li>
+          <a href="index.html"> <span class="footer-links">Home</span></a>
+        </li>
+        <li>
+          <a href="index.html#streaming-movies"
+            ><span class="footer-links">Movies</span></a
+          >
+        </li>
+        <li>
+          <a href="index.html#streaming-tv"
+            ><span class="footer-links">TV Shows</span></a
+          >
+        </li>
+        <li>
+          <a href="index.html#search"
+            ><span class="footer-links">Search</span></a
+          >
+        </li>
+      </ul>
+      <div class="copy">
+        <span>&copy; 2020 Developed by Katie Bullock</span>
+        <p>Powered by <a href="https://www.themoviedb.org/">The Movie DB</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
