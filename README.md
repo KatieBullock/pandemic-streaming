@@ -1,5 +1,7 @@
 # The Quarantine Streaming Source
 
+[Demo](https://katiebullock.github.io/quarantine-streaming/)
+
 The Quarantine Streaming Source is a site designed to help people figure out what to watch while they are staying home and protecting themselves and others during these COVID times. It makes calls to [The Movie DB](https://www.themoviedb.org/) to gather this week's top trending movies and tv shows and where they're streaming. If the user already has a movie or tv show in mind, they can also search right on The Quarantine Streaming Source site.
 
 ## Summary
